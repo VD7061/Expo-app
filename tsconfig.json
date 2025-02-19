@@ -1,0 +1,20 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,  // ✅ Allow JavaScript files
+    "checkJs": false, // ✅ Disable type checking in JS files
+    "jsx": "react-native", // ✅ Required for React Native JSX
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.jsx", // ✅ Include JSX files
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "app/(auth)/index.jsx" , "app/(admin)/index.jsx", "app/(user)/index.jsx" // ✅ Ensure it includes JSX files
+  ]
+}
